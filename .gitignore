@@ -6,8 +6,7 @@ Thumbs.db
 *$py.class
 
 # virtualenv
-.venv/
-venv/
+
 
 
 # VSCode
