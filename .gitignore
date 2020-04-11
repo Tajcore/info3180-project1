@@ -7,7 +7,8 @@ Thumbs.db
 
 # virtualenv
 
-
+.venv/
+venv/
 
 # VSCode
 .vscode
