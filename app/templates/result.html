@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <h2>Successful Form Submission</h2>
+    {% include 'flash_messages.html' %}
+    <p>Name<strong> {{ firstname + ' ' + lastname }}</p>
+    <p>Gender<strong> {{ gender }}</strong></p>
+    <p>Email<strong> {{ email }}</strong></p>
+    <p>Location<strong> {{ location }}</strong></p>
+    <p>Biography<strong> {{ biography }}</strong></p>
+{% endblock %}

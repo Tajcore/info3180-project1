@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class = "title_2">Profiles</h1>
+<div class = "container w-50 cardbox">
+<div class = "column list-group ">
+{% for profile in profiles %}
+            <li class = "list-group-item list-group-mine">
+                <div class = "profile-card">
+                <div class = "imagebox">
+                    <img id = "profile-picture" src = "{{ url_for('static', filename = profile.profile_picture)}}">
+                </div>
+                <div class = "user-info">
+                    <p class = "user-name" style = "font-weight: bold;">{{ profile.first_name }} {{ profile.last_name }}</p>
+                    {% if profile.gender == "male" %}
+                    <div>
+                        <div class = "gender-area">
+                            <img id = "gender-image" src = "{{ url_for('static', filename='assets/male.png') }}">
+                            <p style = "color: rgb(197, 194, 194)">{{ profile.gender }}</p>
+                        </div>
+                    </div>
+                    {% elif profile.gender == "female" %}
+                    <div>
+                        <div class = "gender-area">
+                            <img id = "gender-image" src = "{{ url_for('static', filename='assets/woman.png') }}">
+                            <p style = "color: lightgray">{{ profile.gender }}</p>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div>
+                        <div class = "gender-area">
+                            <img id = "gender-image" src = "{{ url_for('static', filename='assets/non-binary.svg') }}">
+                            <p style = "margin-top : 0.5rem; font-size: 15px; color: lightgray">{{ profile.gender }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div>
+                        <div class = "location-area">
+                            <img id = "location-image" src = "{{ url_for('static', filename='assets/maps-and-flags.png') }}">
+                            <p style = "margin-top : 0.2rem;font-size: 13px;line-height: 14px; color: lightgray">{{ profile.location }}</p>
+                        </div>
+                    </div>  
+                </div>
+                <div class = "button">
+                    <button id = "button" type = "button" class = "btn btn-success" onclick= "window.location.href = '{{ url_for('view_profile', userid = profile.id) }}'">View Profile</button>
+                </div>
+            </li>
+    {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
