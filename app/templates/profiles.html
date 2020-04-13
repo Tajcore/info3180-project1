@@ -12,14 +12,14 @@
                 </div>
                 <div class = "user-info">
                     <p class = "user-name" style = "line-height: 2px; font-weight: bold;">{{ profile.first_name }} {{ profile.last_name }}</p>
-                    {% if profile.gender == "male" %}
+                    {% if profile.gender == "male" or profile.gender =="Male" %}
                     <div>
                         <div class = "gender-area">
                             <img id = "gender-image" src = "{{ url_for('static', filename='assets/male.png') }}">
                             <p style = "color: rgb(197, 194, 194)">{{ profile.gender }}</p>
                         </div>
                     </div>
-                    {% elif profile.gender == "female" %}
+                    {% elif profile.gender == "female" or profile.gender == "Female" %}
                     <div>
                         <div class = "gender-area">
                             <img id = "gender-image" src = "{{ url_for('static', filename='assets/woman.png') }}">
