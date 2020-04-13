@@ -11,7 +11,7 @@
                     <img id = "profile-picture" src = "{{ url_for('static', filename = profile.profile_picture)}}">
                 </div>
                 <div class = "user-info">
-                    <p class = "user-name" style = "font-weight: bold;">{{ profile.first_name }} {{ profile.last_name }}</p>
+                    <p class = "user-name" style = "line-height: 2px; font-weight: bold;">{{ profile.first_name }} {{ profile.last_name }}</p>
                     {% if profile.gender == "male" %}
                     <div>
                         <div class = "gender-area">

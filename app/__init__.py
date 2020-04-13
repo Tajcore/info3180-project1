@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = SECRET_KEY
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://pkmlezjsgguodb:98697071ad427262df495a7689b76393d4a6ca3fda3222b60512ae256e9151a8@ec2-34-235-108-68.compute-1.amazonaws.com:5432/d1672ehihq0i6m"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://whdrjgrihrhabz:372a621310977c01b4e828756de70e321b360c055203bdea1d771fcf1b696cb9@ec2-23-20-129-146.compute-1.amazonaws.com:5432/dbcgs1qd7ovmup"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = './app/static/uploads'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
